@@ -1,0 +1,32 @@
+
+Redis download and start 
+1)go to https://github.com/MicrosoftArchive/redis/releases
+2)download  Redis-x64-3.2.100.zip and extract it and open a command prompt and go to Redis-x64-3.2.100 folder
+3)start Redis server by following command
+  redis-server.exe redis.windows.conf
+4)open another command prompt and start Redis client by following command
+  redis-cli.exe
+5)type ping then you will get PONG as response
+6)set a value for a key by following command
+  set key1 Hello
+7)get key1 value by following command
+  get key1
+  
+Install Redis as a windows service
+1)go to https://github.com/MicrosoftArchive/redis/releases
+2)download  Redis-x64-3.2.100.msi file and install it        (Redis is installed as a windows service)
+
+
+mvn clean install
+mvn spirng-boot:run
+http://localhost:8080/
+
+We need the following for Redis
+1)Redis dependency in pom
+
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-data-redis</artifactId>
+	</dependency>
+	
+2)StringRedisTemplate   (org.springframework.data.redis.core.StringRedisTemplate)
